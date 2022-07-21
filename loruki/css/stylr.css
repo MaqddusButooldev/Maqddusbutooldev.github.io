@@ -1,0 +1,612 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+/* -------------------------------------------variables ----------------------------------------------------*/
+:root {
+  --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+
+}
+
+/* ----------------------------------------------------------Utilities----------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+
+  font-family: 'Lato', sans-serif;
+  font-weight: 300px;
+  
+  
+}
+p{
+  margin: 2rem 20px;
+  line-height: 1.5rem;
+}
+img{
+  width: 100%;
+}
+
+h1,h2,h3{
+  font-weight: 300;
+  margin: 1.5rem;
+  color: var(--light-color);
+}
+
+a{
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+ul li{
+  list-style:none;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+.wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.grid
+{
+  display: grid;
+  grid-template-columns: repeat(2,1fr ) ;
+  gap: 2rem;
+
+}
+
+.box {
+  background-color: #fff;
+  padding: 2rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+  margin: 1.5rem 0;
+  transition: transform 0.3s ease-in;
+
+}
+
+.btn{
+  background-color: var(--primary-color);
+  padding: 10px 30px;
+  border-radius: 5px;
+  display: inline-block;
+  color: var(--light-color);
+  margin: 0.5rem 24px;
+  border: 0;
+}
+.secondary_btn{
+
+  background-color: transparent;
+  border: 1px solid var(--light-color);
+}
+
+
+.btn:hover{
+  transform: scale(0.98);
+}
+
+
+/* ---------------------------------------------------------- navigation ----------------------------------------------------------------*/
+
+header{
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 60%;
+  overflow: auto;
+
+}
+ 
+header .flex{ 
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+nav ul li a {
+  padding: 0.5rem 1rem;
+}
+
+nav ul li a:hover
+{
+  border-bottom: 2px solid var(--light-color);
+}
+
+
+/*----------------------------------contect section-------------------------------------------------------------*/
+
+section.main{
+  height: 400px;
+  background-color: var(--primary-color);
+/*overflow: auto;*/
+  color: var(--light-color);
+  padding-top: 4rem;
+  position: relative;
+ 
+}
+
+section .main .grid{
+  grid-template-columns: 70% 60%;
+}
+.main .wrapper .demo_description h1{
+  font-size:40px;
+}
+
+.main .wrapper .demo_description p{
+  font-size: 1.2rem;
+}
+
+
+
+.box h2{
+  color: var(--dark-color);
+}
+
+input[type="text"],
+input[type="email"]{
+  margin: 0.90rem 0;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid var(--dark-color);
+  width: 100%;
+  padding: 3px ;
+  font-size: 1rem;
+  background: transparent;
+}
+
+
+input[type="submit"]
+{
+  cursor: pointer;
+}
+.demo_form
+{
+  width: 400px;
+  position:relative;
+  bottom: -25px;
+  z-index: 999;
+}
+
+section.main::after ,section.main::before {
+  content: "";
+  background-color:#fff;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -70px;
+  display: inline-block;
+ transform:skewY(-3deg);
+
+
+}
+/*---------------------------project---------------------------*/
+
+section.project{
+  margin-top: 8rem;
+}
+
+section.project .wrapper .graph .content h2{
+  color: var(--dark-color);
+
+}
+section.project .wrapper p{
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400px;
+  line-height: 2rem;
+
+}
+.project .wrapper .flex{
+ 
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+section.project .wrapper .graph{
+  margin: 4rem 0;
+}
+
+section.project .wrapper .graph .flex{
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  max-width: 1000px;
+
+}
+ .content h2{
+  font-size: 2rem;
+  font-weight: bold;
+
+}
+.content span{
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  font-weight: 400px;
+  margin-left: 4rem;
+}
+i{
+  margin-left: 4rem;
+}
+
+
+/*------------------------------cli------------------------*/
+
+section.cli .grid{
+
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+ 
+}
+section.cli .grid .box h3{
+  color: var(--dark-color);
+  font-size: 1.3rem;
+  font-weight: 400;
+  
+}
+
+section.cli .grid  img{
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2 ;
+  width: 100%;
+
+}
+section.cli .grid .box{
+  padding: 0rem;
+  margin: 0.5rem;
+}
+
+
+
+
+
+/*------------------------------------------cloud------------------------------------*/
+
+.cloud{
+  background-color:var(--primary-color);
+  margin-top: 4rem;
+}
+
+.text-content h1{
+font-size: 45px;
+}
+
+.text-content p{
+  color: var(--light-color);
+  font-size: 1rem;
+}
+
+.text-content .btn{
+  background-color: var(--dark-color);
+}
+
+/*----------------------langusges---------------------------------*/
+
+section.languages .flex {
+  flex-wrap: wrap;
+}
+
+.languages h2{
+  text-align: center;
+  color: var(--dark-color);
+  font-size: 2rem;
+  margin: 3rem 0;
+}
+
+.languages .wrapper .box{
+  text-align: center;
+  justify-content: space-between;
+  margin: 18px 6px ;
+
+}
+
+.languages .wrapper .box h4{
+  margin: 1rem 0;
+}
+
+.languages .box:hover {
+  transform: translateY(-15px);
+}
+
+/*-------------------------footer-------------------------*/
+
+footer{
+  background-color: var(--dark-color);
+  padding: 5rem 0;
+  color: var(--light-color);
+}
+footer .grid{
+  grid-template-columns:repeat(3,1fr) ;
+}
+
+
+footer .wrapper .sec i{
+  margin-left: 1rem;
+}
+
+footer .sec a:nth-child(1) i:hover{
+  color: black;
+}
+footer .sec a:nth-child(2) i:hover{
+  color:#047aed;
+}
+
+footer .sec a:nth-child(3) i:hover{
+  color:purple;
+}
+
+footer .sec a:nth-child(4) i:hover{
+  color:#047aed;
+}
+
+
+/*---------------------------------------------------------features---------------------------------------------------------*/
+
+section.server1{
+  height: 270px;
+  margin-top: 0px;
+}
+
+.server1 .wrapper  div img{
+  width: 200px;
+
+}
+section.server1 .wrapper  div , section.server2 .wrapper div {
+  justify-self: flex-end;
+}
+
+.server1 .wrapper .text-content{
+  text-align: left;
+}
+
+
+
+.server1 .wrapper .text-content h1{
+  font-size:4rem;
+}
+
+.server1 .wrapper .text-content p{
+  font-size: 1.2rem;
+  font-weight: lighter;
+
+}
+
+section.server2{
+  background-color: #f4f4f4;
+  margin-top: 0px;
+  height: 400px;
+}
+
+section.server2 .text-content > *{
+
+  color: var(--dark-color);
+  text-align: left;
+}
+section.server2 img{
+  width: 300px;
+}
+
+
+/*  -------------------------------------GRID SECTION ----------------------*/
+
+
+section.gr {
+
+  margin: 4rem 2rem;
+}
+section.gr .grid{
+  grid-template-columns: repeat(3 ,1fr);
+  grid-template-rows: repeat(3 ,1fr);
+}
+
+section.gr .grid .box .flex i{
+  margin: 1rem;
+}
+
+section.gr .grid .box:nth-child(1){
+  grid-column: 1 / span 3;
+  
+}
+section.gr .grid .box:nth-child(2){
+  grid-column: 1 / span 2;
+  
+}
+section.gr .grid .box{
+  padding: 1rem;
+
+}
+section.gr .grid{
+ gap: 0.5px 18px;
+}
+
+
+
+/*-------------------------------------DOC----------------------------------------*/
+
+
+section.doc .wrapper .sidebar .box{
+  background-color: var(--light-color);
+  
+}
+section.server1 .wrapper .text-content {
+  
+  margin-right: 10rem;
+ 
+}
+section.doc .wrapper .sidebar .box h3{
+  color: rgb(51, 51, 51);
+  margin: 20px 0;
+  font-size: 1.5rem;
+  font-weight:200;
+  
+}
+
+section.doc .wrapper .sidebar .box nav ul li a
+{
+  color: rgb(77, 75, 75);
+}
+
+section.doc .wrapper .sidebar .box nav ul li{
+  margin: 10px 0;
+  font-size: 15px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px #ccc solid;
+  
+}
+
+section.doc .wrapper .sidebar .box nav ul li a:hover{
+  font-weight: bold;
+}
+
+
+section.doc .grid {
+  
+  grid-template-columns: 1fr 3fr;
+  align-items: flex-start;
+}
+.alert-success{
+  background-color: var(--success-color);
+  padding: 1rem 0;
+}
+
+.box-lighter h3{
+  color: var(--dark-color);
+  font-size: 1.3rem;
+ font-weight: bold;
+}
+
+code,
+pre {
+  background: #333;
+  color: #fff;
+  padding: 12px;
+}
+
+.box-lighter p{
+  margin: 0.8rem 0;
+}
+.doc , .languages{
+  margin: 2rem 0;
+}
+
+
+/* ----------------------media quries --------------------------*/
+
+
+@media(max-width:1214px)
+{
+  section.main{
+    height: auto;
+  }
+  section.main .grid{
+    grid-template-columns: 1fr;
+    text-align: center;
+    
+  }
+
+  section.main .grid .box{
+    margin: 0 auto;
+    
+  }
+ 
+}
+
+@media(max-width:750px){
+
+  .header {
+    height: 110px;
+  }
+
+
+  header div.flex{
+    flex-direction: column;
+    font-size: 20px;
+  }
+  header nav ul {
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .project .wrapper .flex{
+    
+    justify-content: center;
+  }
+
+  section.project .wrapper .flex .content {
+   justify-content: center;
+    
+  }
+  section.project .wrapper .flex .content i{
+    margin-right: 3px;
+  }
+  .content{
+    width: 300px;
+    margin: 2rem;
+  }
+
+  section.cli .grid , section.cloud .grid , section.server1 .grid , footer .grid  , section.gr .grid , section.doc .grid{
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr ;
+    margin: -1rem 0;
+    align-self: center;
+    text-align: center;
+  
+   
+  }
+  section.server1 ,  section.server2{
+    height: auto;
+  }
+  section.cloud .wrapper img {
+    width: 400px;
+  margin: 0 auto;
+
+  }
+  section.server1 .wrapper img {
+
+    margin-bottom: 5rem;
+  }
+
+ section.cli .grid img , section.gr .grid .box:nth-child(1) , section.gr .grid .box:nth-child(2){
+  grid-column: 1;
+  grid-row: 1;
+ }
+
+
+ section.server1 .grid .flex img , section.server1 .grid .flex img {
+  width: 300px;
+  justify-self: center;
+ }
+ section.server1 .grid .flex:last-child , section.server2 .grid div:last-child {
+  justify-self: center;
+ }
+
+
+ section.server1 .grid .text-content , section.server2 .grid .text-content{
+  text-align: center;
+ margin-right: 1rem;
+ }
+section.doc1 .grid 
+{
+ margin-right: 7rem;
+
+}
+section.doc1 .grid .flex img{
+  margin-left: 7rem;
+}
+}
+
