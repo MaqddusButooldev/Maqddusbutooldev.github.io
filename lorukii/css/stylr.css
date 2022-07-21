@@ -548,10 +548,16 @@ pre {
 
   section.project .wrapper .flex .content {
    justify-content: center;
+   margin-left: 6rem;
     
   }
   section.project .wrapper .flex .content i{
     margin-right: 3px;
+  }
+
+  section.project{
+    max-width: 750;
+  
   }
   .content{
     width: 300px;
@@ -602,11 +608,45 @@ pre {
  }
 section.doc1 .grid 
 {
- margin-right: 7rem;
-
+margin-right: 7rem;
 }
 section.doc1 .grid .flex img{
   margin-left: 7rem;
 }
 }
 
+@media(max-width:500px) {
+
+  header{
+    max-width: 600px;
+  }
+header.flex{
+  display: flex;
+}
+
+section.main , header {
+  width: 500px;
+}
+section.main .grid .box{
+  width: 300px;
+}
+
+
+section.project .wrapper .flex{
+  display: flex;
+  justify-content: flex-end
+}
+
+section.project .wrapper .flex .content i{
+  margin-right: 1rem;
+  padding: 1rem;
+}
+section.doc1 .grid .text-content{
+  margin-left: 62px;
+}
+
+
+section.doc1 .grid .flex img{
+  margin-left: 42px;
+}
+}
