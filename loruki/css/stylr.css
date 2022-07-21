@@ -624,7 +624,8 @@ header.flex{
   display: flex;
 }
 
-section.main , header {
+section.main , header  , section.project , section.cli , section.cloud , section.languages , footer , 
+section.server1 , section.server2 , section .gr , section.doc{
   width: 500px;
 }
 section.main .grid .box{
