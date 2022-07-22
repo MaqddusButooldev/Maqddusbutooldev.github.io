@@ -615,6 +615,8 @@ section.doc1 .grid .flex img{
 }
 }
 
+
+
 @media(max-width:500px) {
 
   header{
@@ -650,4 +652,50 @@ section.doc1 .grid .text-content{
 section.doc1 .grid .flex img{
   margin-left: 42px;
 }
+
+
+}
+
+/*-------------------------------------Animation--------------------------------------------*/
+
+.demo_description {
+  animation: slideInFromLeft 1s ease-in;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.demo_form{
+  animation: slideInFromRight 1s ease-in;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.project {
+  padding-top: 100px;
+  animation: slideInFromBottom 1s ease-in;
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
